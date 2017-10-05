@@ -1,0 +1,36 @@
+<div class="title">Register:</div>
+
+<form action="/registration" method="POST">
+
+    <input type="hidden" name="_csrf" value="{{csrfToken}}">
+
+    <div class='error'>{{error}}</div>
+    <div class="info">
+
+        <div class="input-title">First Name</div>
+
+        <input name="first" type="text">
+
+        <div class="input-title">Last Name</div>
+
+        <input name="last" type="text">
+
+        <div class="input-title">E-mail</div>
+
+        <input name="email" type="text">
+
+        <div class="input-title">Password</div>
+
+        <input name="password" type="password">
+
+    </div>
+
+    <div class="access">
+
+        <input class="submit" type="submit" name="submit" value="Submit">
+
+        <div> If you are already a member, please <a href='/login'>log in </a></div>
+
+    </div>
+
+</form>

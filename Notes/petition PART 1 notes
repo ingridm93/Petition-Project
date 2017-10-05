@@ -1,0 +1,43 @@
+Part 1:
+
+it is an old school web app. everytimie the user clicks a bitton then it updates the form.
+
+there are 3 screens.
+
+the main page -> flashy intro with first name and las name. with a box that needs to be canvas where users will be able to sign using the mouse.. then when you hit submit what you want to save to the databse is the first name last name and the image inside the canvas.
+
+for the canvas
+
+var can = document.querySelector('canvas');
+can.toDataURL();
+
+// returns data:image/png;base64, code for the actual pixels of the image in ccode
+if you take this url and save it to the database and you can have in on record.
+
+create an sql file for signatures
+
+DROPT TABLE IF EXIST signatures;
+
+CREATE TANLE signatures(
+id SERIAL PRIMARY KEY
+first VARCHAR(200) NOT NULL,
+last VARCHAR(200) NOT NULL,
+signature TEXT NOT NULL,
+created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP (optional)
+)
+
+that is all you need for your table to save the info into the database.
+
+how to get canvas data into the database. when you click submit. you have to take steps to put that data url into the form
+
+
+<input name='first' type='text'>
+<input name='sig' type='hidden'> with the hidden field when the user has finished signing. you have to get the url and put it into the hidden field and then you will get the firt name last name and signature that has a hidden field.
+
+in JS you need to allow the user to draw in the canvas. and retrieve the data into the hidden field. when? mouse up or when they click submit then at that point put the url into the hidden field. need to use body parser and you need to put that in the database.
+
+for ERROR page you can be redirected to main page with an error message.
+
+when user clicks submit it will redirect to the postpeition page.
+
+the third page will return a query of all the first and last names

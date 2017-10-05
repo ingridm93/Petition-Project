@@ -1,0 +1,26 @@
+<div id="names">
+
+
+    <ul class="signer-list">
+        {{#each signer}}
+            <li>
+                {{#if this.homepage}}
+                    <a href="{{this.homepage}}">{{this.first}} {{this.last_name}}</a>
+                {{else}}
+                    {{this.first}} {{this.last}}
+                {{/if}}
+                {{#if this.age}}
+                    ({{this.age}}
+                    {{#if this.city}}, <a href="/petition/signers/{{this.city}}">{{this.city}}</a>{{/if}}) {{else if this.city}} (
+                    <a href="/petition/signatures/{{this.city}}">{{this.city}}</a>)
+                {{/if}}
+            </li>
+        {{/each}}
+    </ul>
+
+</div>
+
+<div class="profile"> <a href='/petition/signed'>Back to profile.</a> </div>
+
+
+<div class="logout"><a href='/login'>LogOut</a></div>

@@ -1,0 +1,50 @@
+<form action="/profile/update" method="POST">
+
+    <input type="hidden" name="_csrf" value="{{csrfToken}}">
+
+
+    <div class='title'>{{error}}</div>
+
+    <div class="title"> Edit your profile.</div>
+
+    <div> {{error}} </div>
+
+    <div class="info">
+
+        <div class="input-title">First Name</div>
+
+        <input name="first" type="text" value="{{first}}">
+
+        <div class="input-title">Last Name</div>
+
+        <input name="last" type="text" value="{{last}}">
+
+        <div class="input-title">Email</div>
+
+        <input name="email" type="text" value="{{email}}">
+
+        <div class="input-title">Password</div>
+
+        <input name="password" type="password">
+
+        <div class="input-title">Age</div>
+
+        <input name="age" type="text" value='{{age}}'>
+
+        <div class="input-title">City</div>
+
+        <input name="city" type="text" value="{{city}}">
+
+        <div class="input-title">Homepage</div>
+
+        <input name="homepage" type="text" value="{{homepage}}">
+
+    </div>
+
+    <input class="submit" type="submit" name="continue" value="Update">
+
+</form>
+
+
+<div id="signers"> <a href='/petition/signed'>Back to homepage.</a> </div>
+<div class="logout"><a href='/login'>LogOut</a></div>

@@ -1,0 +1,32 @@
+<div class="petition-goal">
+
+    <div class="title">The Petition:</div>
+
+    <div>Have a greater number of aquariums around the city to have people watch and look at fish more often.</div>
+
+</div>
+
+<div class="error">{{error}}</div>
+
+<form action="/petition/sign" method="POST">
+
+    <input type="hidden" name="csrf" value="{{csrfToken}}">
+
+    <div class="info">
+
+
+
+        <h1>{{first}} {{last}}</h1>
+
+        <h3>Please sign here!</h3>
+
+        <input id="sig" name="signature" type="hidden">
+
+    </div>
+
+    <canvas id="signature" width="500" height="100"></canvas>
+
+
+    <input class="submit" type="submit" name="submit" value="Submit">
+
+</form>

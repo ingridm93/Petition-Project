@@ -1,0 +1,30 @@
+<form action="/profile" method="POST">
+
+    <input type="hidden" name="_csrf" value="{{csrfToken}}">
+
+
+    <div class='error'>{{error}}</div>
+
+    <div class="info-title"> Now please tell us a little bit more about yourself.</div>
+
+    <div class="info">
+
+        <div class="input-title">Age</div>
+
+        <input name="age" type="text">
+
+        <div class="input-title">City</div>
+
+        <input name="city" type="text">
+
+        <div class="input-title">Homepage</div>
+
+        <input name="homepage" type="text">
+
+    </div>
+
+    <input class="submit" type="submit" name="continue" value="Continue">
+
+</form>
+
+<div class="logout"><a href='/login'>LogOut</a></div>

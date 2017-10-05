@@ -1,0 +1,29 @@
+<div class="title">Are you sure you want to delete your signature?</div>
+
+
+<div class="container">
+
+
+    <h1>{{first}} {{last}}</h1>
+
+
+    <div id="signed">
+
+        <img src='{{signature}}' />
+
+    </div>
+
+
+
+    <form action="/petition/delete" method="POST">
+
+        <div class="delete"> <input class="submit" type="submit" name="delete" value="Delete"></div>
+
+    </form>
+
+    <div id="signers"> <a href='/petition/signed'>Back to homepage.</a> </div>
+
+    <div class="logout"><a href='/login'>LogOut</a></div>
+
+
+</div>

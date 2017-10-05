@@ -1,0 +1,20 @@
+client is aconstructor. it also has a pool constructor that contains all the database  info. it says how many max connections and if connection is idle for 10 seconds example it should dshut down.
+
+if you have the pool is you would call it
+
+pool.connect with 3 params err client and done. and this is what we want to use because we intend to publish our website live on the internet and we need to anticipate that we will be quite successful and dealing with hunderds of req per second without finding a problem down the road.
+
+the spiced pg module was created. you could writ this code but it was already provided for simplicity.
+
+the postgres server is a server and a major thing that it does is balance and manage req.
+
+
+git clone (link from github)
+
+cd ginger-petition
+
+git checkou -b ingrid origin/master
+
+git push origin HEDD: INGRID
+
+HEAD -> FRIEDMAN

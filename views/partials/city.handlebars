@@ -1,0 +1,22 @@
+<div class="title">
+    Signers in {{city}}</div>
+.
+<div id="names">
+
+    <ul>
+        {{#each signersByCity}}
+            <li>
+                {{this.first}} {{this.last}}
+                {{#if this.age}}
+                    ({{this.age}})
+                {{/if}}
+            </li>
+        {{/each}}
+    </ul>
+
+</div>
+
+<div id="signers"> <a href='/petition/signers'>See all {{signersTotal}} signers.</a> </div>
+
+
+<div class="logout"><a href='/login'>LogOut</a></div>

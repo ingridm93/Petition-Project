@@ -1,0 +1,107 @@
+need to hash the the password but also you need to use the right kind of hashing algorith,s. there are multiple hashing algorithms. for passwords use bcrypt.
+
+the good thing about bcrypt is that it is slow. and that means.
+
+you salt the password and so you store the salt and the hash password.
+
+registtration -> hash the password.
+
+
+var bcrypt = require('bcryptjs');
+
+
+
+function hashPassword(plainTextPassword) {
+    return new Promise(function(resolve, reject) {
+        bcrypt.genSalt(function(err, salt) {
+            if (err) {
+                return reject(err);
+            }
+            bcrypt.hash(plainTextPassword, salt, function(err, hash) {
+                if (err) {
+                    return reject(err);
+                }
+                console.log(hash);
+                resolve(hash);
+            });
+        });
+    });
+}
+
+hashPassword('letmein')
+
+
+
+return reject so that you can get out.
+
+gen - salt method which is used to create the string.
+
+
+var bcrypt = require('bcryptjs');
+
+function checkPassword(textEnteredInLoginForm, hashedPasswordFromDatabase) {
+    return new Promise(function(resolve, reject) {
+        bcrypt.compare(textEnteredInLoginForm, hashedPasswordFromDatabase, function(err, doesMatch) {
+            if (err) {
+                reject(err);
+            } else {
+                resolve(doesMatch);
+            }
+        });
+    });
+}
+
+hashPassword('letmein').then(function(hash) {
+//stpre user info in database
+}).then(function(hash( {
+return checkPassword('letmein', hash);
+}))).then(function(doesMatch) {
+console.log(doesMatch)
+})
+
+the promise still resolves but the result would be a boolean if the passwords match then it will return true. but if it doesn't it will return false.
+
+you will need functions that will do these very things. you can copy paste these functions. you need to learn WHEN to use the.
+
+gen salt and hash should be used after the user has submitted data in the database. when to use compare is is used when the user wants to login. so select * from users where email = $1. then you get the hash password and compare to req.body.password and if true then login and if false then do not log in..
+
+if you just do this
+
+the password can be a varchar
+
+
+when a user registers and succeessfully inserted data in database. and the second time they become logged in and bcrypt compare them and confirm they're a match. in req.session.
+
+f(doesMatch) {
+req.session.user = {
+id: results.rows[0].id,
+first: results.rows[0].first,
+last: result.rows[0].last
+}
+}
+;
+CREAT TABLE users (
+id SERIAL PRIMARY KEY,
+email VARCHAR(300) NOT NULL UNIQUE
+password VARCHAR(200) NOT NULL,
+first VARCHAR(200),
+last VARCHAR(200),
+signature TEXT NOT NULL
+)
+
+now we have two tables and you want to link both tables together. add to signatures table
+
+
+user_id INTEGER NOT NULL and this will be the link between both tables.
+
+** you can include timestanp TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+
+if(doesMatch {
+checkForSignature(result.rows[0].if).then(function(siId) {
+req.session.user = {
+id: results.rows[0].id,
+first: results.rows[0].first,
+last: result.rows[0].last
+sigId: sigId
+})
+})

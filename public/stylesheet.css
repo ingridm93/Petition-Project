@@ -1,0 +1,177 @@
+body {
+    background-color: rgb(26, 255, 209);
+    height: 100%;
+    font-family: "Rockwell", "Rockwell Bold", monospace;
+    font-size: 15px;
+    color: black;
+}
+
+
+.title {
+
+    position: relative;
+    font-family: "Rockwell Extra Bold", "Rockwell Bold", monospace;
+    font-size: 50px;
+    text-align: center;
+    padding-bottom: 50px;
+    width: 100%;
+}
+
+.info-title {
+
+    position: relative;
+    font-family: "Rockwell Bold", "Rockwell Bold", monospace;
+    font-size: 30px;
+    text-align: left;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.petition-goal {
+    position: relative;
+    font-family: "Rockwell Bold", "Rockwell Bold", monospace;
+    font-size: 30px;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 20px;
+
+}
+
+
+form {
+    position: relative;
+    height: 100%;
+    width: 400px;
+    padding: 40px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%);
+
+}
+
+
+input {
+    position: relative;
+    height:50px;
+    width: 300px;
+    border: 2px solid black;
+    font-family: "Rockwell", "Rockwell Bold", monospace;
+    font-size: 15px;
+    color: black;
+    text-align: left;
+    padding: 10px;
+
+}
+
+.input-title  {
+    font-family: "Rockwell", "Rockwell Bold", monospace;
+    font-size: 20px;
+}
+
+.access {
+    position: relative;
+    font-family: "Rockwell", "Rockwell Bold", monospace;
+    font-size: 15px;
+    color: black;
+    text-align: left;
+    padding: 10px;
+}
+
+.submit {
+    height: 30px;
+    width: 100px;
+    color: gray;
+    margin-top: 40px;
+    font-family: "Rockwell", "Rockwell Bold", monospace;
+    font-size: 15px;
+    color: black;
+    margin-bottom: 30px;
+    text-align: center;
+    line-height: 0;
+
+}
+
+
+.info {
+    display: flex;
+    flex-direction: column;
+}
+
+
+#signature {
+
+    border: 5px solid black;
+    background-color: white;
+    width: 500px;
+}
+
+#signed {
+    border: 5px solid black;
+    background-color: white;
+}
+
+.container {
+    position: relative;
+    text-align: center;
+    width: 500px;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%, -50%);
+    margin-top: 280px;
+    padding: 20px;
+}
+
+a {
+    font-family: "Rockwell", "Rockwell Bold", monospace;
+    color: rgb(102, 102, 153);
+    margin-top: 20px;
+}
+
+#signers {
+    position: relative;
+    text-align: center;
+    margin-top: 30px;
+    font-family: "Rockwell", "Rockwell Bold", monospace;
+    font-size: 20px;
+    color: black;
+
+
+}
+
+.logout {
+    position: relative;
+    bottom: 0px;
+    left: 95%;
+    margin-top: 100px;
+
+
+}
+
+ul {
+    text-align: left;
+     list-style-position: inside;
+}
+
+
+
+#names {
+    position: relative;
+    width: 800px;
+    font-family: "Rockwell", "Rockwell Bold", monospace;
+    font-size: 25px;
+    color: black;
+    left: 50%;
+    transform: translate(-50%);
+    margin-top: 20px;
+
+}
+
+.delete {
+    text-align: center;
+
+}
+
+.profile {
+    position: relative;
+    text-align: center;
+}

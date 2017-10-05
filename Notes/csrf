@@ -1,0 +1,25 @@
+require csrf and put cookie parser before csrf
+
+
+every post req that has a post req.
+
+.all((req,res0 => {
+res.render
+({
+csrf.Token
+})
+}))
+
+this token will be in a hidden input. vale -> {{csrfToken}} name = +csrf type=hidden -> this is is all inside the formo.
+
+when dubugging this stuff. when you render this page you should be able to inspect this form. and the valueof input hiddent tag is a hash. always check that the ha sh is the value of that input
+
+
+csrfToken: req.csrfToken();
+
+
+the .allcsrfProtection middlware is run before the post reuquest and this is what checks for the token
+
+example on github page.
+
+cookie parser is used first the app.use (csrf).
